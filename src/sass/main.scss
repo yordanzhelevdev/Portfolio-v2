@@ -1,0 +1,142 @@
+@font-face {
+  font-family: ChunkFive;
+  src: url(../fonts/ChunkFive/Chunkfive.otf);
+}
+
+@font-face {
+  font-family: "caluna-sans";
+  src: url(../fonts/CallunaSans-Regular.ttf);
+}
+
+$charlestonGreen: rgba(45, 45, 42, 1);
+$silverSand: rgba(194, 193, 194, 1);
+$paleLavender: rgba(216, 212, 242, 1);
+$kombuGreen: rgba(56, 66, 59, 1);
+$medSpringGreen: rgba(32, 252, 143, 1);
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Header And Nav */
+header {
+  nav {
+    width: 100%;
+    background: $charlestonGreen;
+    position: fixed;
+    z-index: 2;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+
+      li:first-child {
+        display: none;
+      }
+
+      li {
+        flex: auto;
+        text-align: center;
+        &:hover {
+          background: $silverSand;
+          -webkit-transition-property: background;
+          -moz-transition-property: background;
+          -o-transition-property: background;
+          transition-property: background;
+          -webkit-transition-duration: 0.2s;
+          -moz-transition-duration: 0.2s;
+          -o-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+          -webkit-transition-timing-function: ease-in;
+          -moz-transition-timing-function: ease-in;
+          -o-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+        }
+
+        a {
+          display: block;
+          padding: 15px;
+          text-decoration: none;
+          font-size: 30px;
+          color: $paleLavender;
+
+          &:hover {
+            color: $charlestonGreen;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Intro section */
+
+.intro {
+  width: 100%;
+  height: 80vh;
+  background-color: $medSpringGreen;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0.4em 10px 0px #0d100e;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 94%;
+    height: 0;
+    width: 0;
+    border: 40px solid $medSpringGreen;
+    border-radius: 100%;
+    box-shadow: 0px 5px 1px 0px #0d100e;
+  }
+
+  h1.intro-head {
+    font-family: ChunkFive, sans-serif;
+    font-size: 6vw;
+    letter-spacing: 25px;
+    color: $paleLavender;
+    text-shadow: 5px 4px 5px #251d1d;
+    white-space: nowrap;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  h2.intro-subhead {
+    font-family: "calluna-sans", Helvetica, Helvetica Neue, Arial, sans-serif;
+    color: $kombuGreen;
+    font-size: 3vw;
+    text-shadow: 0.125em 0.125em 0 hsla(0, 0%, 0%, 0.05);
+  }
+}
+
+/* Work section */
+.work {
+  width: 100%;
+  height: 80vh;
+  background-color: $kombuGreen;
+  display: flex;
+  flex-direction: column;
+
+  .work-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+
+    .work-logo {
+      width: 300px;
+    }
+  }
+}
