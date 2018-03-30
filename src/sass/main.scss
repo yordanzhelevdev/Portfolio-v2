@@ -37,9 +37,20 @@ header {
       padding: 0;
       list-style-type: none;
       display: flex;
+      align-items: center;
+
+      li:first-child #logo-heading {
+        font-family: ChunkFive, sans-serif;
+        color: $silverSand;
+        letter-spacing: 5px;
+        pointer-events: none;
+        margin: 0;
+      }
 
       li:first-child {
+        pointer-events: none;
         display: none;
+        transition: all 400ms;
       }
 
       li {
@@ -138,5 +149,55 @@ header {
     .work-logo {
       width: 300px;
     }
+
+    h1 {
+      font-size: 4em;
+      color: $paleLavender;
+    }
   }
+}
+
+/*Animation */
+.logo-appearance {
+  animation: slide-down 0.5s ease-out;
+  -webkit-animation: slide-down 0.5s ease-out;
+  -moz-animation: slide-down 0.5s ease-out;
+}
+
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes slide-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+@-moz-keyframes slide-down {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+
+#test {
+  width: 100%;
+  height: 600px;
+  background-color: pink;
 }
