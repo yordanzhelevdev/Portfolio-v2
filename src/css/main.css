@@ -138,6 +138,7 @@ header nav ul li a:hover {
 .work .work-heading h1 {
   font-size: 4em;
   color: #d8d4f2;
+  margin-bottom: 0;
 }
 .work .work-section {
   display: flex;
@@ -156,7 +157,7 @@ header nav ul li a:hover {
   border-radius: 10px;
 }
 .work .work-section .item .item-img {
-  width: 30vw;
+  width: 25vw;
   border-radius: 10px;
 }
 .work .work-section .item .item-name {

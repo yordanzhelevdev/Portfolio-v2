@@ -157,6 +157,7 @@ header {
     h1 {
       font-size: 4em;
       color: $paleLavender;
+      margin-bottom: 0;
     }
   }
   .work-section {
@@ -174,8 +175,10 @@ header {
       margin: 10px;
       background-color: $silverSand;
       border-radius: 10px;
+      // width: 30%;
+      //flex: 1;
       .item-img {
-        width: 30vw;
+        width: 25vw;
         border-radius: 10px;
       }
       .item-name {
