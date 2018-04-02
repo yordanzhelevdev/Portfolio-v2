@@ -147,7 +147,6 @@ header nav ul li a:hover {
   justify-content: center;
 }
 .work .work-section .item {
-  display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -155,6 +154,7 @@ header nav ul li a:hover {
   margin: 10px;
   background-color: #c2c1c2;
   border-radius: 10px;
+  display: none;
 }
 .work .work-section .item .item-img {
   width: 25vw;
@@ -169,6 +169,21 @@ header nav ul li a:hover {
   margin: 0;
   color: #38423b;
   font-size: 20px;
+}
+.work .btn-load {
+  width: 50%;
+  align-self: center;
+  margin: 20px;
+  padding: 20px 32px;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #2d2d2a;
+  border: 0;
+  color: #d8d4f2;
+}
+
+.active {
+  display: flex !important;
 }
 
 /*Animation */

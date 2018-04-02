@@ -27,3 +27,35 @@
 
   console.log(observer);
 })();
+
+//Load more projects
+document.getElementById("btn-loader").onclick = function() {
+  const items = document.querySelectorAll(".item");
+  const button = document.getElementById("btn-loader");
+  console.log(items);
+
+  //Counter for the items
+  let counter = 0;
+
+  //Check if all the elements are active
+  let checkIfAllActive = Array.from(items).every(item => {
+    return item.classList.contains("active");
+  });
+
+  console.log(checkIfAllActive);
+
+  for (let item of items) {
+    if (!item.classList.contains("active")) {
+      counter++;
+      item.classList.add("active");
+    } else if (checkIfAllActive) {
+      button.innerHTML = "test";
+      return;
+    }
+
+    if (counter == 3) {
+      counter = 0;
+      break;
+    }
+  }
+};
