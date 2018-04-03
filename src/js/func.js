@@ -49,7 +49,7 @@ document.getElementById("btn-loader").onclick = function() {
       counter++;
       item.classList.add("active");
     } else if (checkIfAllActive) {
-      button.innerHTML = "test";
+      button.innerHTML = "That's all";
       return;
     }
 
@@ -59,3 +59,5 @@ document.getElementById("btn-loader").onclick = function() {
     }
   }
 };
+
+//To add the checkIfAllActive outside

@@ -183,10 +183,20 @@ header nav ul li a:hover {
 }
 
 .active {
+  animation: blink 1s ease-out;
   display: flex !important;
 }
 
-/*Animation */
+/* Animation */
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .logo-appearance {
   animation: slide-down 0.5s ease-out;
   -webkit-animation: slide-down 0.5s ease-out;

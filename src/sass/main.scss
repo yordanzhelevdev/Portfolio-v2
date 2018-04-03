@@ -211,16 +211,29 @@ header {
 
 //Active work tab
 .active {
+  animation: blink 1s ease-out;
   display: flex !important;
 }
 
-/*Animation */
+/* Animation */
+
+//Project appearing animation
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .logo-appearance {
   animation: slide-down 0.5s ease-out;
   -webkit-animation: slide-down 0.5s ease-out;
   -moz-animation: slide-down 0.5s ease-out;
 }
 
+//Logo appearing animations
 @keyframes slide-down {
   0% {
     opacity: 0;
@@ -231,7 +244,6 @@ header {
     transform: translateY(0);
   }
 }
-
 @-webkit-keyframes slide-down {
   0% {
     opacity: 0;
