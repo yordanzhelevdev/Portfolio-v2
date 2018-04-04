@@ -2,7 +2,7 @@
 //Logo appearence
 (function() {
   const logo = document.getElementById("logo-container");
-  const test = document.getElementById("test");
+  const secAboutMe = document.getElementById("aboutme");
 
   const options = {
     root: null,
@@ -23,7 +23,7 @@
 
   const observer = new IntersectionObserver(logoEntry, options);
 
-  observer.observe(test);
+  observer.observe(secAboutMe);
 
   console.log(observer);
 })();
@@ -59,5 +59,4 @@ document.getElementById("btn-loader").onclick = function() {
     }
   }
 };
-
 //To add the checkIfAllActive outside
