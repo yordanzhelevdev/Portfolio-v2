@@ -10,7 +10,7 @@ function logoAppearing() {
   
   //Returns the size of an element and its position relative to the viewport.
   const elTop = workHeading.getBoundingClientRect().top;
-  
+
   if(scrollY > elTop) {
     logo.style.display = "list-item";
     logo.classList.add("logo-appearance");
