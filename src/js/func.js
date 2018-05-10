@@ -1,35 +1,28 @@
 "use strict";
-//Logo appearence
-(function() {
-  const logo = document.getElementById("logo-container");
-  const secAboutMe = document.getElementById("aboutme");
+//Logo Appearance
+function logoAppearing() {
+  //getBoundingClientRect()
+  const logo = document.getElementById('logo-container');
+  const workHeading = document.querySelector('.work-heading h1');
 
-  const options = {
-    root: null,
-    rootmargin: "0",
-    threshhold: 1.0
-  };
+  //Returns the number of pixels that the document is currently scrolled vertically 
+  const scrollY = window.scrollY;
+  
+  //Returns the size of an element and its position relative to the viewport.
+  const elTop = workHeading.getBoundingClientRect().top;
+  
+  if(scrollY > elTop) {
+    logo.style.display = "list-item";
+    logo.classList.add("logo-appearance");
+  }
+}
 
-  const logoEntry = function(entries, observer) {
-    entries.forEach(entry => {
-      console.log(entry);
-      if (entry.isIntersecting == true) {
-        logo.style.display = "list-item";
-        logo.classList.add("logo-appearance");
-        entry.target.style.backgroundColor = "green";
-      }
-    });
-  };
-
-  const observer = new IntersectionObserver(logoEntry, options);
-
-  observer.observe(secAboutMe);
-
-  console.log(observer);
-})();
+window.addEventListener('scroll', logoAppearing);
 
 //Load more projects
-document.getElementById("btn-loader").onclick = function() {
+const loadMoreBtn = document.getElementById('btn-loader');
+
+function loadMore() {
   const items = document.querySelectorAll(".item");
   const button = document.getElementById("btn-loader");
   console.log(items);
@@ -38,7 +31,7 @@ document.getElementById("btn-loader").onclick = function() {
   let counter = 0;
 
   //Check if all the elements are active
-  let checkIfAllActive = Array.from(items).every(item => {
+  const checkIfAllActive = Array.from(items).every(item => {
     return item.classList.contains("active");
   });
 
@@ -58,5 +51,9 @@ document.getElementById("btn-loader").onclick = function() {
       break;
     }
   }
-};
+}
+
+loadMoreBtn.addEventListener('click', loadMore);
+
+
 //To add the checkIfAllActive outside
